@@ -11,19 +11,21 @@
 
 
 //  import moment from 'moment'; 
-const moment = require('moment')
+//  const moment = require('moment')
  
 let formattedDate=moment().format('YYYY-MM-DD') ;
-    console.log(formattedDate);
+document.getElementById('formattedDate').textContent= formattedDate;    
        
 
 
- //
- console.log(moment().format('MMMM D , YY'))   
+ //month date, year
+ document.getElementById('yearMonth').textContent = moment().format('MMMM D , YY')
+ console.log()   
 
 
 //It will give Time 
- console.log(moment().format('h:mm:ss a'))
+document.getElementById('setTime').textContent = `Time  :  ${moment().format('h:mm:ss a')} `
+ console.log()
 
 
         
@@ -31,9 +33,7 @@ let formattedDate=moment().format('YYYY-MM-DD') ;
     
    //Add 1 day to a date      
   let date = moment('2026-03-06')
-   let tommorrow =moment(date).add(1,'day');
-
-     console.log(tommorrow);
+  document.getElementById('tomorrow').textContent  =`Tommorow :  ${moment(date).add(1,'day')}`
      
 
 
@@ -41,12 +41,14 @@ let formattedDate=moment().format('YYYY-MM-DD') ;
 // Subtract 1 hour from a date using Moment.js
        let now = moment() 
        
-       let hourAgo = moment(now).subtract(1,'hour');
+       document.getElementById('hourAgo').textContent =`horuAgo   :  ${moment(now).subtract(1,'hour')}` ;
+       
              console.log(hourAgo);
             
 //get the difference between to dates... 
       
  let diff= moment.duration(now.diff(date));  
-        
- console.log(`The difference is${diff.hours()} hours, ${diff.minutes()} minutes , ${diff.seconds()} seconds`);
+      
+ document.getElementById('timeDiff').textContent =`The difference is     :   ${diff.hours()} hours, ${diff.minutes()} minutes , ${diff.seconds()} seconds`
+Document.write();
              
