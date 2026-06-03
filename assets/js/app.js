@@ -43,7 +43,7 @@
 // Subtract 1 hour from a date using Moment.js
        let now = moment() 
        
-       document.getElementById('hourAgo').textContent =`horuAgo   :  ${moment(now).subtract(1,'hour')}` ;
+       document.getElementById('hourAgo').textContent =`hourAgo   :  ${moment(now).subtract(1,'hour')}` ;
        
              console.log(hourAgo);
 
